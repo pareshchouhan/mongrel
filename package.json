@@ -1,28 +1,27 @@
 {
-  "name": "powir",
-  "version": "1.0.2",
-  "description": "Windows 10 based tool to monitor and analyze your system's power and battery usage",
+  "name": "mongrel",
+  "version": "0.0.1-alpha1",
+  "description": "Studio3t Cross platform alternative",
   "main": "public/electron.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SlapBot/powir.git"
+    "url": "git+https://github.com/pareshchouhan/mongrel.git"
   },
   "author": {
-    "name": "Ujjwal Gupta",
-    "email": "ugupta41@gmail.com",
-    "url": "https://http://slapbot.me/"
+    "name": "Paresh Chouhan",
+    "email": "pareshchouhan2013@gmail.com",
+    "url": "https://futuretraxex.com"
   },
   "keywords": [
     "electron",
-    "battery",
-    "windows-battery",
+    "mongo",
+    "studio-3t",
     "react",
-    "battery-monitoring",
-    "battery-analyzer"
+    "mongo-admin"
   ],
   "build": {
-    "productName": "powir",
-    "appId": "powir.slapbot.me",
+    "productName": "Mongrel",
+    "appId": "mongrel.futuretraxex.com",
     "win": {
       "icon": "build/icon.ico",
       "target": "portable"
@@ -40,6 +39,7 @@
     "electron-log": "^4.2.0",
     "jssoup": "0.0.11",
     "lodash": "^4.17.15",
+    "mongoose": "^5.9.19",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",

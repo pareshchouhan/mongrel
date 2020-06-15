@@ -1,7 +1,7 @@
 const { app, BrowserWindow, ipcMain, Menu } = require('electron')
 const path = require('path')
 const isDev  = require('electron-is-dev')
-
+process.env['PATH'] = process.env['PATH'] + (process.env.OS.startsWith('Windows') ? ';' : ':') + path.join(__dirname, 'BIN');
 
 function createWindow () {
   const win = new BrowserWindow({
