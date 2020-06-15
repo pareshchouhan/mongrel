@@ -9,3 +9,6 @@ and
 npm run react-start  # In Two seperate terminal windows.
 ```
 
+## Thanks  
+
+Code structure thanks to: https://github.com/SlapBot/powir
