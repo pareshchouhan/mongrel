@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { defaults }  from 'react-chartjs-2';
+import { Dashboard } from "./modules/Dashboard/Dashboard";
 
 defaults.global.defaultFontFamily = 'Neucha'
 
@@ -11,6 +12,7 @@ function App() {
     return (
         <div>
         	{"Paresh"}
+        	<Dashboard />
         </div>
     );
 }
