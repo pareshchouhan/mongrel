@@ -1,0 +1,37 @@
+@import 'colors';
+
+.button {
+	background-color: $default-button-color;
+	border: none;
+	box-shadow: none;
+	color: $text-button-default;
+	transition: all 0.2s ease;
+
+	&:hover, &:active, &:focus {
+		background-color: $default-button-color-hover;
+		color: $text-button-default;
+		outline: none;
+	}
+
+	&:disabled {
+		background-color: $disabled-button-color !important;
+		color: $text-button-default;
+	}
+}
+
+.link {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	color: $default-button-color;
+	transition: all 0.2s ease;
+
+	&:hover, &:active, &:focus {
+		color: $default-button-color-hover;
+		outline: none !important;
+	}
+
+	&:disabled {
+		color: $disabled-button-color;
+	}
+}

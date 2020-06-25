@@ -1,0 +1,20 @@
+.chipStyle {
+	background: #007eff;
+	margin: 10px;
+	padding: 5px 10px;
+	display: flex;
+	color: #fff;
+	min-width: 80px;
+	justify-content: space-between;
+	align-items: center;
+	height: 30px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.removeTag {
+	font-size: 11px;
+	transform: rotate(45deg);
+	display: inline-block;
+	padding: 15px;
+	cursor: pointer;
+}

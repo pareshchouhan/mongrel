@@ -1,0 +1,52 @@
+@import 'colors';
+
+.wrapper {
+	.input {
+		background-color: $text-button-default;
+		color: $text-default;
+		border: 1px solid $input-border-default;
+		transition: all 0.2s ease;
+
+		&:active, &:focus {
+			border: 1px solid $default-button-color;
+		}
+
+		&::placeholder {
+			color: $input-placeholder-default;
+		}
+	}
+
+	.label {
+		color: $text-default;
+	}
+
+	.message {
+		color: $input-message-default;
+	}
+
+	.inputButton {
+		.button {
+			color: $text-button-default;
+		}
+	}
+}
+
+.success {
+	.input {
+		border: 1px solid $success;
+	}
+
+	.message {
+		color: $success;
+	}
+}
+
+.error {
+	.input {
+		border: 1px solid $error;
+	}
+
+	.message {
+		color: $error;
+	}
+}

@@ -1,0 +1,154 @@
+.dropdown{
+	width: 100%;
+	position: relative;
+}
+.dropdownHead {
+    border: 1px solid #c4c4c4;
+    padding: 15px 38px 15px 15px;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+	height: 100%;
+    position: relative;
+	&.active {
+		border-color: #007eff;
+	}
+}
+
+.dropdownList {
+	background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    margin-top: 4px;
+    max-height: 400px;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+	left: 0;
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: transform .2s ease, visibility .2s ease, opacity .2s ease;
+	& div {
+		padding: 15px 0 15px 20px;
+		font-size: 16px;
+		font-weight: 500;
+		user-select: none;
+		cursor: pointer;
+	}
+	& div:hover {
+		background: #efefef;
+    }
+    &.dropdownListAnimate {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+	&.dropup {
+		transform: translateY(calc(-100% - 60px));
+	}
+}
+.arrowDownIcon {
+	width: 11px;
+    height: 11px;
+    position: absolute;
+    right: 15px;
+    top: -5px;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(0deg);
+    transform-origin: 50% 64%;
+    transition: transform .2s ease;
+
+    &.animate {
+        transform: rotate(180deg);
+    }
+}
+.arrowDownIcon:before {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11px;
+    height: 11px;
+    border-right: 3px solid #007eff;
+    border-bottom: 3px solid #007eff;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    background: transparent;
+
+}
+.dropdownItems {
+    &.active {
+        color: #007eff !important;
+        background: rgba(43, 146, 252, 0.07) !important;
+    }
+}
+
+.dropdownHead.primary {
+    background: #007eff;
+    border-color: #007eff;
+    color: #fff;
+    .arrowDownIcon:before {
+        border-right: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+    }
+}
+
+.dropdownHead.success {
+    background: #00B707;
+    border-color: #00B707;
+    color: #fff;
+    .arrowDownIcon:before {
+        border-right: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+    }
+}
+.dropdownHover.dropdown {
+    &:hover .dropdownList {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+        
+    &:hover .arrowDownIcon {
+        transform: rotate(180deg);
+    }
+}
+
+.dropdownTags {
+    display: flex;
+    flex-wrap: wrap;
+    & > span {
+        font-size: 13px;
+        margin-right: 8px;
+        padding: 2px 8px;
+        background: #f5f5f5;
+        border-radius: 5px;
+        white-space: nowrap;
+        margin-bottom: 11px;
+        border: 1px solid #ccc;
+    }
+}
+.deleteTags {
+    font-size: 11px !important;
+    margin-left: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.dropdownHeadInput {
+    padding: 0 !important;
+    input {
+        width: 100% !important;
+        height: 51px;
+        padding: 14px;
+        background: transparent;
+	    max-height: 100%;
+    }
+}

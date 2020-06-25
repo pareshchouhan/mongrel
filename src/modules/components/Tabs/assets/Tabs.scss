@@ -1,0 +1,19 @@
+.tabsWrapper {
+	display: flex;
+}
+.tabItems {
+	cursor: pointer;
+}
+.tabItems:last-child {
+	margin: 0 !important;
+}
+.horizontal .tabItems {
+	margin-right: 50px;
+	margin-bottom: 9px;
+}
+.vertical.tabsWrapper {
+	flex-direction: column;
+}
+.vertical .tabItems {
+	margin-bottom: 30px;
+}

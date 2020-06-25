@@ -1,0 +1,121 @@
+.beforeSubmitText {
+	text-align: center;
+}
+.loaderBox {
+	position: relative;
+	height: 160px;
+	width: 100%;
+	justify-content: center;
+	display: flex;
+	border-bottom: 1px solid #e4e4e4;
+	align-items: center;
+	flex-direction: column;
+	> div {
+		position: relative !important;
+		top: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: 100% !important;
+		transform: translate(0) !important;
+	}
+	> span {
+		display: block;
+		position: relative;
+		font-size: 17px;
+		height: auto;
+		letter-spacing: .3px;
+		margin-top: 13px;
+	}
+}
+.afterGenerationButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 14px !important;
+	> button {
+		margin-right: 15px;
+		background-color: #efefef !important;
+		color: #007eff !important;
+		border: 1px solid #007eff !important;
+		padding: 11px;
+	}
+}
+.thumb {
+	position: relative;
+	top: -2px;
+	font-size: 22px !important;
+	margin-left: 5px;
+}
+.resolvedIcon {
+	font-size: 34px !important;
+	color: #0b8900;
+}
+.resolvedIconText {
+	font-size: 17px;
+}
+.afterSubmitText {
+	width: 100%;
+	height: 64%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-size: 30px;
+	font-weight: 200;
+}
+.feedbackContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #EFEFEF;
+
+    .submitButton {
+        width: 90%;
+		margin: auto;
+		margin-bottom: 10px;
+    }
+    .starRatingContainer{
+        display: flex;
+        justify-content: center;
+        margin: 15px 0 15px 0;
+    }
+    .stars {
+		width: 35px;
+		height: 35px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .textArea {
+        width: 90%;
+		height: 85px;
+        margin-bottom: 18px;
+        border-radius: 5px;
+	    padding: 10px;
+    }
+    ::-webkit-input-placeholder {
+        padding: 10px;
+        color: #949494;
+        font-family: Proxima Nova;
+        line-height: 15px;
+        font-weight: 500;
+      }
+
+    .headingText {
+        font-size: 20px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+		margin: 15px 0 9px;
+    }
+    .subheadingText {
+        font-size: 16px;
+        font-weight: 500;
+        color: #949494;
+    }
+}
+@media(max-height: 800px) {
+	.afterGenerationButton > button {
+		padding: 0 11px;
+	}
+}

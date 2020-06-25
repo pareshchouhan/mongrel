@@ -10,10 +10,7 @@ function App() {
     const state = useSelector(state => state)
     console.log(state);
     return (
-        <div>
-        	{"Paresh"}
-        	<Dashboard />
-        </div>
+        <Dashboard />
     );
 }
 

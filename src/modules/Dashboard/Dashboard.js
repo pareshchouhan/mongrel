@@ -1,8 +1,16 @@
 import React from 'react'
 import './assets/dashboard.scss';
-import '../../renderer/renderer'
-
+import Tabs from '../components/Tabs/Tabs';
+// import '../../renderer/renderer'
+const tabs = [
+    {text: 'Home', value:'home1'},
+    {text: 'Console 1', value:'home2'},
+    {text: 'Console 2', value:'home3'}
+];
 export const Dashboard = props => {
+    function selectTab(tabData) {
+        console.log(tabData);
+    }
     return <div className="content">
         <div className="header-options">
             <div className="header-options__item">
@@ -62,7 +70,13 @@ export const Dashboard = props => {
                 </div>
             </div>
             <div className="right-panel">
-                Get started by creating a <a>connection</a>
+            <Tabs
+				tabsData={tabs}
+				onSelect={tabData => selectTab(tabData)}
+				tabStyle='horizontal'
+				className='tabWrapper_settings'
+				activeClass='activeTab'
+			/>
             </div>
         </div>
     </div>;

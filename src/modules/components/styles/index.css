@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Utilities (Ignore if editor throws warning for misplaced import. Custom imports should always be added to the end of this file) */
+@import 'custom-utilities.css';

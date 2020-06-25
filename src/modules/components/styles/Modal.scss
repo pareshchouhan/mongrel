@@ -1,0 +1,49 @@
+@import 'colors';
+
+.ReactModal__Overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(26, 24, 38, 0.8);
+	z-index: 20000;
+}
+
+.ReactModal__Content {
+	top: 50%;
+	left: 50%;
+	width: 60vw;
+	height: 80vh;
+	transform: translate(-50%, -50%);
+	z-index: 20001;
+}
+
+.ReactModal__Header {
+	background-color: $modal-header;
+
+	.ReactModal__Title {
+		color: $text-button-default;
+	}
+
+	.ReactModal__Close {
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+
+		& > i {
+			color: $text-button-default;
+		}
+	}
+}
+
+.ReactModal__Body {
+	background-color: $text-button-default;
+	overflow: auto;
+	overflow-x: hidden;
+    height: 100%;
+}
+
+.ReactModal__Footer {
+	background-color: $text-button-default;
+}

@@ -1,0 +1,20 @@
+.editableDiv {
+	border: 1px dashed transparent;
+	display: inline-block;
+	width: fit-content;
+	outline: none;
+	&:hover {
+		border: 1px dashed #777;
+	}
+	&:focus {
+		border: 1px dashed #007eff;;
+		background: #efefef;
+		color: #007eff;
+		outline: none;
+	}
+	&:empty:not(:focus):before{
+		content:attr(data-placeholder);
+		color:grey;
+		font-style:italic;
+	}
+}
