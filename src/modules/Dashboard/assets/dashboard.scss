@@ -1,3 +1,34 @@
 .paresh {
   background: beige;
 }
+
+.header-options {
+  display: flex;
+
+}
+
+.header-options__item {
+  min-width: 35px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px
+}
+
+.main-window {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.connections-pane {
+  flex: 2;
+}
+
+.tasks-pane {
+  flex: 1;
+}

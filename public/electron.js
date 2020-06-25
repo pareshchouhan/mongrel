@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain, Menu } = require('electron')
 const path = require('path')
 const isDev  = require('electron-is-dev')
 process.env['PATH'] = process.env['PATH'] + (process.env.OS.startsWith('Windows') ? ';' : ':') + path.join(__dirname, 'BIN');
+const DB = require('./src/db/db')
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -62,4 +63,10 @@ ipcMain.on('asynchronous-message', (event, arg) => {
 ipcMain.on('synchronous-message', (event, arg) => {
   console.log(arg) // prints "ping"
   event.returnValue = 'pong'
+})
+
+ipcMain.on('connect-db', (event, arg) => {
+  console.log('connecting to db')
+  const db = new DB()
+  db.connect()
 })
