@@ -1,37 +1,54 @@
 const MongoClient = require('mongodb').MongoClient
 
-const url = 'mongodb://localhost:27017/mongrel'
+const LOCAL_URL = 'mongodb://localhost:27017/mongrel'
 
 const DB_NAME = 'mongrel'
 
-const DB = function() {
-    this.client = null;
-    this.db = null
+const DB = function(connectionUrl, config) {
+    this.mClient = null
+    this.mDB = null
+    this.adminDB = null
+    this.allDatabases = []
+    this.mConnectionUrl = connectionUrl || LOCAL_URL
+    this.mDbName = config && config.dbName ? config.dbName : DB_NAME
+    this.mConfig = config
+    console.log(this)
 };
 
-DB.prototype.connect = async () => {
-    console.log('connecting to db.....')
-    const client = new MongoClient(url, {
+DB.prototype.connect = async function() {
+    // Connect to default db
+    this.mClient = new MongoClient(this.mConnectionUrl, Object.assign({}, this.mConfig, {
         useNewUrlParser: true
-    })
+    }))
     try {
-        await client.connect()
-        this.db = client.db(DB_NAME)
-        const result = await this.db.collection('test').insertOne({
-            a: 1
-        })
-        console.log(result)
+        await this.mClient.connect()
+        this.mDB = this.mClient.db(this.mDbName)
+        this.adminDB = this.mDB.admin()
+        this.allDatabases = (await this.adminDB.listDatabases()).databases
+        const collections = await (await this.mDB.listCollections()).toArray()
+        return {
+            databases: this.allDatabases,
+            collections
+        }
     } catch(err) {
         console.log(err)
     }
 }
 
-DB.prototype.disconnect = async() => {
-    client.close()
+DB.prototype.connectToDB = function(dbName) {
+    this.mDbName = dbName
+    this.mDB = this.mClient.db(dbName)
 }
 
-DB.prototype.getDB = () => {
-    return this.db
+DB.prototype.disconnect = async function() {
+    this.mClient.close()
 }
 
+DB.prototype.getDB = function() {
+    return this.mDb
+}
+
+DB.prototype.getClient = function() {
+    this.mClient
+}
 module.exports = DB;

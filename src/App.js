@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { defaults }  from 'react-chartjs-2';
 import { Dashboard } from "./modules/Dashboard/Dashboard";
+import './renderer/renderer';
 
 defaults.global.defaultFontFamily = 'Neucha'
 

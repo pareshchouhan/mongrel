@@ -2,7 +2,7 @@ const { app, BrowserWindow, ipcMain, Menu } = require('electron')
 const path = require('path')
 const isDev  = require('electron-is-dev')
 process.env['PATH'] = process.env['PATH'] + (process.env.OS.startsWith('Windows') ? ';' : ':') + path.join(__dirname, 'BIN');
-const DB = require('./src/db/db')
+const DB = require('./src/db/DB')
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -55,18 +55,21 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-ipcMain.on('asynchronous-message', (event, arg) => {
-  console.log(arg) // prints "ping"
-  event.reply('asynchronous-reply', 'pong')
-})
+// ipcMain.on('asynchronous-message', (event, arg) => {
+//   console.log(arg) // prints "ping"
+//   event.reply('asynchronous-reply', 'pong')
+// })
 
-ipcMain.on('synchronous-message', (event, arg) => {
-  console.log(arg) // prints "ping"
-  event.returnValue = 'pong'
-})
+// ipcMain.on('synchronous-message', (event, arg) => {
+//   console.log(arg) // prints "ping"
+//   event.returnValue = 'pong'
+// })
 
-ipcMain.on('connect-db', (event, arg) => {
+ipcMain.on('connect-db', async (event, arg) => {
   console.log('connecting to db')
   const db = new DB()
-  db.connect()
+  //TODO: store this object in DB Connection Manager
+  const dbConnection = await db.connect()
+  console.log(dbConnection)
+  event.reply('connect-db-response', dbConnection)
 })
