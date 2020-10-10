@@ -1,10 +1,10 @@
 // Handlers goes here
-import './handlers/DBHandler'
+import './DB/handlers/DBHandler'
 
 
 
 // Actions goes here.
-import * as DBActions from './actions/DBActions'
+import * as DBActions from './DB/actions/DBActions'
 // In renderer process (web page).
 const { ipcRenderer } = window.require('electron')
 
