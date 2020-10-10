@@ -7,13 +7,13 @@ const ConnectModal = props => {
         props.modalClose();
     }
     function setConnectionName(e) {
-        sendConnectionDataObject.connection_name = e.target.value;
+        sendConnectionDataObject.connectionName = e.target.value;
     }
     function setServerName(e) {
-        sendConnectionDataObject.server_name = e.target.value;
+        sendConnectionDataObject.serverName = e.target.value;
     }
     function setServerPort(e) {
-        sendConnectionDataObject.server_port = e.target.value;
+        sendConnectionDataObject.serverPort = e.target.value;
     }
     function sendConnectionData() {
         console.log(sendConnectionDataObject);
