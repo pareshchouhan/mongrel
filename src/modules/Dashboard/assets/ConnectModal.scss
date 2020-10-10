@@ -1,0 +1,26 @@
+.modalTableHeader, .modaltableList {
+  display: table;
+  width: 100%;
+  margin-top: -2px;
+  font-weight: 600;
+  > div {
+    width: 25%;
+    display: table-cell;
+    padding: 3px 10px;
+  }
+}
+.modaltableList {
+  > div {
+    padding: 8px 10px;
+  }
+}
+.modalTableHeader {
+  background: #a7a7bc;
+}
+.modalWrapper {
+  height: 200px;
+  overflow: auto;
+}
+.connectionForm {
+  padding: 10px;
+}
