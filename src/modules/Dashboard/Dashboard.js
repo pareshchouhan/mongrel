@@ -1,7 +1,7 @@
 import React from 'react'
 import './assets/dashboard.scss';
 import Tabs from '../components/Tabs/Tabs';
-// import '../../renderer/renderer'
+import '../../renderer/renderer'
 const tabs = [
     {text: 'Home', value:'home1'},
     {text: 'Console 1', value:'home2'},
