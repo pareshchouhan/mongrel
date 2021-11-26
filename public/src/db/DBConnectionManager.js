@@ -1,6 +1,4 @@
-
-const DBConnectionManager = function() {
-    this.dbConnections = []
+var DBConnectionManager = function () {
+    this.dbConnections = [];
 };
-
-const 
+//# sourceMappingURL=DBConnectionManager.js.map

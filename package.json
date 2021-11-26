@@ -65,6 +65,7 @@
     "react-eject": "react-scripts eject",
     "electron-start": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
     "electron-build": "electron-builder",
+    "build:electron": "./node_modules/.bin/tsc --project tsconfig.electron.json",
     "build": "npm run react-build && npm run electron-build",
     "lite-mode": "npm run browser-react-start"
   },
@@ -84,6 +85,7 @@
     ]
   },
   "devDependencies": {
+    "@types/electron": "^1.6.10",
     "@types/react-redux": "^7.1.20",
     "electron": "^16.0.2",
     "electron-builder": "^22.14.5",

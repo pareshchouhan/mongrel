@@ -24,3 +24,8 @@ yarn-error.log*
 
 .idea/
 dist/
+
+public/*.js
+public/**/*.js
+public/*.js.map
+public/**/*.js.map
