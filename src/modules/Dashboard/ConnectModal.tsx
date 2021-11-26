@@ -1,18 +1,18 @@
 import React from 'react';
 import {Modal, Button, Input} from 'antd';
 import './assets/ConnectModal.scss';
-const sendConnectionDataObject = {};
-const ConnectModal = props => {
+const sendConnectionDataObject: any = {};
+const ConnectModal = (props: any) => {
     function handleCancel() {
         props.modalClose();
     }
-    function setConnectionName(e) {
+    function setConnectionName(e: any) {
         sendConnectionDataObject.connectionName = e.target.value;
     }
-    function setServerName(e) {
+    function setServerName(e: any) {
         sendConnectionDataObject.serverName = e.target.value;
     }
-    function setServerPort(e) {
+    function setServerPort(e: any) {
         sendConnectionDataObject.serverPort = e.target.value;
     }
     function sendConnectionData() {

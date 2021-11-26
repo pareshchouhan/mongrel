@@ -15,4 +15,4 @@ const { ipcRenderer } = window.require('electron')
 // })
 // ipcRenderer.send('asynchronous-message', 'ping')
 
-DBActions.connectToDb()
+DBActions.connectToDb(null);

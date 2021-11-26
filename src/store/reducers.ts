@@ -10,6 +10,6 @@ const projectReducer = combineReducers({
     about
 })
 
-export const rootReducer = (state, action) => {
+export const rootReducer = (state: any, action: any) => {
     return projectReducer(state, action)
 }

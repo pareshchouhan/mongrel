@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TabsBody = props => {
+const TabsBody = (props: any) => {
 	return props.children;
 };
 

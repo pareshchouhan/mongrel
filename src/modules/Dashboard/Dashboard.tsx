@@ -17,12 +17,12 @@ const AppOptions = [
     {text: 'Roles', value:'roles', key: 'roles'},
     {text: 'Tasks', value:'tasks', key: 'tasks'}
     ];
-export const Dashboard = props => {
-    function selectTab(tabData) {
+export const Dashboard = (props: any) => {
+    function selectTab(tabData: any) {
         console.log(tabData);
     }
     const [openConnectModal, setOpenConnectModal] = useState(false);
-    function appOptionsClickHandler(index) {
+    function appOptionsClickHandler(index: number) {
         switch (index) {
             case 0 : {
                 setOpenConnectModal(true);
@@ -70,7 +70,7 @@ export const Dashboard = props => {
             <div className="right-panel">
             <Tabs
 				tabsData={tabs}
-				onSelect={tabData => selectTab(tabData)}
+				onSelect={(tabData: any) => selectTab(tabData)}
 				tabStyle='horizontal'
 				className='tabWrapper_settings'
 				activeClass='activeTab'

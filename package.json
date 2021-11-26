@@ -33,6 +33,11 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.10",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "antd": "^4.17.2",
     "axios": "^0.19.2",
     "chart.js": "^2.9.3",
     "electron-is-dev": "^1.2.0",
@@ -48,7 +53,8 @@
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "typescript": "^4.5.2"
   },
   "scripts": {
     "browser-react-start": "node public/browser.js&&set REACT_APP_LITE_MODE=1&&react-scripts start",
@@ -78,6 +84,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-redux": "^7.1.20",
     "electron": "^9.0.0",
     "electron-builder": "^22.6.1",
     "node-sass": "^4.14.1",
