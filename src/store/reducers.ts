@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { produce } from 'immer';
 const about = produce((state = {
     version: '0.0.1'
-}, action) =>{
+}, action: any) =>{
    return state;
 });
 const projectReducer = combineReducers({
