@@ -87,7 +87,7 @@
   "devDependencies": {
     "@types/electron": "^1.6.10",
     "@types/react-redux": "^7.1.20",
-    "electron": "^16.0.2",
+    "electron": "^18.3.7",
     "electron-builder": "^22.14.5",
     "node-sass": "^6.0.1",
     "npm-watch": "^0.11.0",
